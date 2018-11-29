@@ -20,8 +20,8 @@ describe 'as a visitor i see navigation bar' do
   end
 
   it 'has link to brows all the merchants' do
-    merchant1 = Merchants.create(name: 'walmart')
-    merchant2 = Merchants.create(name: 'kingsoopers')
+    merchant1 = Merchant.create(name: 'walmart')
+    merchant2 = Merchant.create(name: 'kingsoopers')
     visit '/'
 
     click_on 'Merchants'
