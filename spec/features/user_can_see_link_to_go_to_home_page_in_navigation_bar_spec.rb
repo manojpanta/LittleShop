@@ -29,19 +29,11 @@ describe 'as a visitor i see navigation bar' do
     expect(page).to have_content(merchant1.name)
     expect(page).to have_content(merchant2.name)
   end
+
+  it 'has link to log in and registr' do
+    visit '/'
+
+    expect(page).to have_link('Log In')
+    expect(page).to have_link('Register')
+  end
 end
-
-
-# User Story 2
-# Visitor Navigation
-#
-# As a visitor
-# I see a navigation bar
-# This navigation bar includes links for the following:
-# - a link to return to the welcome / home page of the application ("/")
-# - a link to browse all items for sale ("/items")
-# - a link to see all merchants ("/merchants")
-# - a link to my shopping cart ("/cart")
-# - a link to log in ("/login")
-# - a link to the user registration page ("/register")
-# Next to the shopping cart link I see a count of the items in my cart
