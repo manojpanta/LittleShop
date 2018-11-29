@@ -18,6 +18,17 @@ describe 'as a visitor i see navigation bar' do
     expect(page).to have_content(item1.name)
     expect(page).to have_content(item2.name)
   end
+
+  it 'has link to brows all the merchants' do
+    merchant1 = Merchants.create(name: 'walmart')
+    merchant2 = Merchants.create(name: 'kingsoopers')
+    visit '/'
+
+    click_on 'Merchants'
+
+    expect(page).to have_content(merchant1.name)
+    expect(page).to have_content(merchant2.name)
+  end
 end
 
 
