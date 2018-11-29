@@ -1,0 +1,10 @@
+<h1> Little Shop </h1>
+<div class='accessories'>
+  <%@items.each do |i| %>
+  <section>
+    <h2> <%=i.name%> </h2>
+    <div class='med-image'><img src="<%=i.image%>" alt="Forest"></div>
+  </section>
+  <%end%>
+
+</div>
